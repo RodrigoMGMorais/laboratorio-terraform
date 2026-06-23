@@ -62,4 +62,4 @@ Você fez todo o fluxo profissional, exatamente igual ao usado no mercado:
 ✅ Viu como o Terraform controla o que foi criado
 ✅ Aprendeu a diferença entre testes locais e recursos em nuvem
 
-Quer que eu já monte um próximo exemplo um pouco mais avançado, para praticar mais? 😊
+Gratidão!!!
