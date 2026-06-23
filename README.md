@@ -1,40 +1,65 @@
-# 🧪 Laboratório de Terraform — Rodrigo Morais
+# Laboratório de Estudo do Terraform
 
-Repositório de estudo e prática de **Infraestrutura como Código (IaC)** usando Terraform / OpenTofu.
-Focado no que realmente é usado no mercado, com exemplos funcionais e seguros.
+Este projeto foi criado para aprender o fluxo completo do Terraform, sem necessidade de conta em nuvem.
+
+## O que foi feito
+- Instalação do Terraform no ambiente Codespaces
+- Estrutura do código: provedores, recursos e saídas
+- Execução de todos os comandos principais:
+  - `terraform init` → Prepara o ambiente
+  - `terraform validate` → Verifica erros
+  - `terraform plan` → Mostra o que será feito
+  - `terraform apply` → Executa a criação
+  - `terraform destroy` → Remove tudo o que foi criado
+
+## Recursos usados
+- `random_string`: Gera um código único
+- `local_file`: Cria um arquivo de texto na pasta do projeto
+
+## Código final
+```hcl
+terraform {
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+    local = {
+      source  = "hashicorp/local"
+      version = "~> 2.5"
+    }
+  }
+}
+
+resource "random_string" "identificador" {
+  length  = 6
+  special = false
+  upper   = false
+  numeric = true
+}
+
+resource "local_file" "documento_teste" {
+  content  = "✅ Meu primeiro teste com Terraform! Código gerado: ${random_string.identificador.result}"
+  filename = "./meu_arquivo_teste.txt"
+}
+
+output "codigo_gerado" {
+  value = random_string.identificador.result
+}
+
+output "caminho_do_arquivo" {
+  value = path.module
+}
+
 
 ---
 
-## 📋 O que tem aqui
-- Conceitos práticos de IaC
-- Códigos prontos para testar na AWS Free Tier
-- Separação de ambientes (dev, homologação, produção)
-- Boas práticas de segurança e organização
-- Exemplos de recursos: VPC, Subnets, S3, IAM, etc.
+## 🎓 Resumo final do que você aprendeu hoje
+Você fez todo o fluxo profissional, exatamente igual ao usado no mercado:
+✅ Instalou e configurou o Terraform
+✅ Entendeu a estrutura do código
+✅ Aprendeu o que cada comando faz
+✅ Viu como o Terraform controla o que foi criado
+✅ Aprendeu a diferença entre testes locais e recursos em nuvem
 
----
-
-## ⚙️ Ambiente recomendado
-- **GitHub Codespaces**: sem instalação, roda direto no navegador
-- **Terraform**: versão ≥ 1.9.x
-- **AWS**: conta Free Tier (sem custo com uso controlado)
-
----
-
-## 🚀 Fluxo de trabalho padrão
-```bash
-# Prepara o projeto e baixa os provedores
-terraform init
-
-# Formata e valida o código
-terraform fmt
-terraform validate
-
-# Mostra o que vai ser criado/alterado/excluído
-terraform plan
-
-# Executa a criação da infraestrutura
-terraform apply
-
-# Remove tudo quando terminar os testes
-terraform destroy
+Quer que eu já monte um próximo exemplo um pouco mais avançado, para praticar mais? 😊
