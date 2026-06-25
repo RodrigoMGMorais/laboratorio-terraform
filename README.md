@@ -50,14 +50,4 @@ output "codigo_gerado" {
 output "caminho_do_arquivo" {
   value = path.module
 }
-
-
 ---
-## 🎓 Resumo final do que fiz hoje:
-✅ Instalei e configurou o Terraform
-✅ Entendi a estrutura do código
-✅ Aprendi o que cada comando faz
-✅ Vi como o Terraform controla o que foi criado
-✅ Aprendi a diferença entre testes locais e recursos em nuvem
-
-Gratidão!!!
