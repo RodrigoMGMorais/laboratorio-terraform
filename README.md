@@ -54,12 +54,42 @@ output "caminho_do_arquivo" {
 
 ---
 
-## 🎓 Resumo final do que você aprendeu hoje
-Você fez todo o fluxo profissional, exatamente igual ao usado no mercado:
-✅ Instalou e configurou o Terraform
-✅ Entendeu a estrutura do código
-✅ Aprendeu o que cada comando faz
-✅ Viu como o Terraform controla o que foi criado
-✅ Aprendeu a diferença entre testes locais e recursos em nuvem
+## 🎓 Resumo final do que fiz hoje:
+✅ Instalei e configurou o Terraform
+✅ Entendi a estrutura do código
+✅ Aprendi o que cada comando faz
+✅ Vi como o Terraform controla o que foi criado
+✅ Aprendi a diferença entre testes locais e recursos em nuvem
 
 Gratidão!!!
+
+---
+## Adendo para teste.tf:
+
+## Projeto: Infraestrutura como Código (IaC) no Azure
+Objetivo
+Este laboratório tem como objetivo a prática de provisionamento de recursos no Azure utilizando Terraform. O foco foi a implementação de boas práticas, como a parametrização de variáveis e a validação estática de código.
+
+Estrutura do Projeto
+teste.tf: Define o provedor (Azure) e a declaração dos recursos (Resource Group).
+
+variables.tf: Define as variáveis de entrada, permitindo flexibilidade e reutilização do código.
+
+O que foi aprendido
+Automação: Uso de IaC para evitar configurações manuais no portal do Azure.
+
+Modularização: Desacoplamento entre lógica (resource) e configuração (variables).
+
+Qualidade: Utilização de terraform validate para análise de integridade do código antes da implementação.
+
+Comandos Utilizados
+terraform init - Inicialização do provedor.
+
+terraform validate - Validação da sintaxe e estrutura do HCL.
+---
+
+"Dando continuidade aos estudos de IaC, hoje foquei em estruturar projetos Terraform com variáveis. O aprendizado de separar a definição dos recursos das configurações de ambiente (via variables.tf) é um passo fundamental para criar infraestruturas escaláveis e fáceis de manter. A prática em ambientes simulados e o uso de validação estática de código têm sido essenciais para evoluir nessa jornada."
+
+"Estou estruturando meu código seguindo princípios de desacoplamento, separando definições de variáveis da declaração de recursos, o que torna a infraestrutura mais resiliente e fácil de escalar".
+
+Fim do teste!
