@@ -1,1 +1,19 @@
-✅ Meu primeiro teste com Terraform! Código gerado: d4a1dj
+✅ ## Meu primeiro teste com Terraform! 
+
+🎯 Resumen de Comandos
+Comando	Propósito
+terraform init	Inicializar proyecto
+terraform validate	Validar sintaxis
+terraform fmt	Formatear código
+terraform plan	Preview de cambios
+terraform apply	Aplicar cambios
+terraform show	Ver estado actual
+terraform state list	Listar recursos
+terraform destroy	Eliminar recursos
+
+✅ ¿Qué Hemos Aprendido?
+✅ Ciclo de vida completo de recursos
+✅ Comandos básicos de Terraform
+✅ Gestión de estado automática
+✅ Modificación de recursos existentes
+✅ Destrucción controlada de infraestructura
